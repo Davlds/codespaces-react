@@ -146,9 +146,79 @@ console.log(numbers.map((number) => number * 2));
 console.log(numbers.toSorted((a, b) => a - b)); //C
 console.log(numbers.toSorted((a, b) => b - a)); //D
 
-
 numbers.sort((a, b) => a - b);
 // Maior valor
-console.log('Maior =', numbers[numbers.length-1]);
+console.log("Maior =", numbers[numbers.length - 1]);
 // Menor valor
-console.log('Menor =', numbers[0]);
+console.log("Menor =", numbers[0]);
+
+// **********************************
+// Aula 13/05 - Funções, array destructuring, spread operator
+console.log(fruits);
+
+const fruits2 = ["Kiwi", "Avocado"];
+console.log([...fruits2, "Grape"]);
+
+// Spread - ...
+const fruits3 = [...fruits, ...fruits2];
+console.log(fruits3);
+
+// DESAFIO - Exibir todas as frutas que comecem
+// com a letra A
+const out = [];
+const letra = "a";
+
+// for (let i = 0; i < fruits3.length; i++) {
+//   const fruit = fruits3[i];
+//   //toLowerCase - minúscula, toUpperCase - maiúscula
+//   if (fruit[0].toLowerCase() === letra) {
+//     out.push(fruit);
+//   }
+// }
+
+// fruits3.map((fruit) => {
+//   if (fruit[0].toLowerCase() === letra) {
+//     out.push(fruit);
+//   }
+// });
+
+// find - retorna a primeira ocorrência,
+// de acordo com a condição
+let outFind = fruits3.find(
+  (fruit) => fruit[0].toLowerCase() === letra
+);
+console.log(outFind);
+
+// filter - retorna TODAS as ocorrências,
+// de acordo com a condição
+let outFilter = fruits3.filter(
+  (fruit) => fruit[0].toLowerCase() === letra
+);
+console.log(outFilter);
+
+// DESAFIO - Exibir o valor da soma de todos os
+// números do array 'numbers'
+
+console.log(numbers);
+
+// map
+let soma = 0;
+numbers.map((number) => {
+  soma += number;
+});
+console.log(soma);
+
+// reduce
+console.log(
+  numbers.reduce((soma, number) => soma + number)
+);
+
+// Object
+const pessoa = {
+  nome: 'Zé Vaqueiro',
+  idade: 25,
+  profissao: 'Cantor/Compositor'
+};
+
+console.log(pessoa.nome);
+console.log(pessoa['nome']);
