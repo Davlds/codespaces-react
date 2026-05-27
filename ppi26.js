@@ -285,7 +285,7 @@ const celulares = estoque.filter(
 
 console.log(celulares);
 
-console.log("------------------------");
+console.log("-----------------------");
 const tablets = estoque.filter(
   (produto) => produto.category === "Tablet"
 );
