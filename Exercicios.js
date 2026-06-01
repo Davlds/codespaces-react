@@ -125,3 +125,27 @@ const produtos = [
 
 // Parte C
 // Filtre apenas os produtos com preço maior que: 100
+
+ const total = produtos.reduce((acc, produtos) => acc + produtos.preco, 0);
+ console.log("Soma dos preços:", total);
+
+ const ordem = produtos.toSorted((a, b) => a.preco - b.preco);
+ console.log("preços ordenados:", ordem);
+
+ const precoMaior = produtos.filter(
+   (produtos) => produtos.preco >= 100
+  );
+console.log("preços maior ou igual a 100", precoMaior);
+
+// Desafio Extra ⭐
+// Sem usar sort() nem toSorted(), descubra qual é o produto mais caro.
+// Dica:
+// Use um for ou reduce().
+
+let produtoMaisCaro = produtos[0];
+for (let i = 0; i < produtos.length; i++) {
+  if(produtos[i].preco > produtoMaisCaro.preco){
+    produtoMaisCaro = produtos[i];
+  }
+};
+console.log(produtoMaisCaro);
