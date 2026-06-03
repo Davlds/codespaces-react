@@ -142,10 +142,10 @@ console.log("preços maior ou igual a 100", precoMaior);
 // Dica:
 // Use um for ou reduce().
 
-let produtoMaisCaro = produtos[0];
-for (let i = 0; i < produtos.length; i++) {
-  if(produtos[i].preco > produtoMaisCaro.preco){
-    produtoMaisCaro = produtos[i];
-  }
-};
-console.log(produtoMaisCaro);
+// let produtoMaisCaro = produtos[0];
+// for (let i = 0; i < produtos.length; i++) {
+//   if(produtos[i].preco > produtoMaisCaro.preco){
+//     produtoMaisCaro = produtos[i];
+//   }
+// };
+// console.log(produtoMaisCaro);
