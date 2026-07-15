@@ -26,6 +26,11 @@
     font-style: italic;
 }
 
+.notice-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .notice-actions button {
     background-color: var(--azul);
     color: #ffffff;
